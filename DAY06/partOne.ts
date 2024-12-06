@@ -1,4 +1,4 @@
-let input = await Bun.file("./DAY6/map.txt").text();
+let input = await Bun.file("./DAY06/map.txt").text();
 let map = input.split('\r\n').map(grid => grid.split(""));
 
 let pos = { x: 50, y: 45 };

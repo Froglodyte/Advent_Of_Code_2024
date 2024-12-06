@@ -1,6 +1,5 @@
-let input = (await Bun.file("pages.txt").text()).split("\n").map(nums => nums.split(",").map(nums => Number(nums)))
-
-let rules = (await Bun.file("rules.txt").text()).split("\n").map(nums => nums.split("|").map(nums => Number(nums)))
+let input = (await Bun.file("./DAY05/pages.txt").text()).split("\r\n").map(nums => nums.split(",").map(nums => Number(nums)))
+let rules = (await Bun.file("./DAY05/rules.txt").text()).split("\r\n").map(nums => nums.split("|").map(nums => Number(nums)))
 
 let sum = 0
 let isValid = false
