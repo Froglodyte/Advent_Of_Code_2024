@@ -11,7 +11,8 @@ for(let l of lines){
 }
 
 for(let i = 0; i < solns.length; i++){
-    for(let j of combos(vals[i])){
+    for(let j of combos(vals[i], solns[i])){
+        console.log(j)
         if(j == solns[i]){
             sum += solns[i]
             break;
@@ -19,24 +20,25 @@ for(let i = 0; i < solns.length; i++){
     }
 }
 
-function combos(numbers: number[]): number[] {
+function combos(nums: number[], maxVal: number): number[] {
     const operators = ["+", "*", "||"];
     const results: number[] = [];
   
-    function helper(currentValue: number, index: number, currentExpression: string): void {
-        if (index == numbers.length - 1) {
-            results.push(currentValue);
+    function helper(currentVal: number, index: number, currentExp: string): void {
+        if(currentVal > maxVal) return
+        if (index == nums.length - 1) {
+            results.push(currentVal);
             return;
         }
   
-        const nextNumber = numbers[index + 1];
+        const nextNum = nums[index + 1];
   
         for (const operator of operators) {
-            if (operator == '+') helper(currentValue + nextNumber, index + 1, `${currentExpression} + ${nextNumber}`);
-            if (operator == '*') helper(currentValue * nextNumber, index + 1, `${currentExpression} * ${nextNumber}`);
+            if (operator == '+') helper(currentVal + nextNum, index + 1, `${currentExp} + ${nextNum}`);
+            if (operator == '*') helper(currentVal * nextNum, index + 1, `${currentExp} * ${nextNum}`);
         }
     }
-    helper(numbers[0], 0, numbers[0].toString());
+    helper(nums[0], 0, nums[0].toString());
   
     return results;
 }
