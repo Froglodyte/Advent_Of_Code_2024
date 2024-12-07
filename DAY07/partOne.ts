@@ -12,7 +12,6 @@ for(let l of lines){
 
 for(let i = 0; i < solns.length; i++){
     for(let j of combos(vals[i])){
-        console.log(j)
         if(j == solns[i]){
             sum += solns[i]
             break;
