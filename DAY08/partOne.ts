@@ -13,8 +13,7 @@ for(let posns of antennae.values()){
     for(let i = 0; i < posns.length; i++){
         for(let j = i+1; j < posns.length; j++){
             const [x1, y1] = posns[i];
-            const[x2, y2] = posns[j]
-            const d1 = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+            const [x2, y2] = posns[j]
 
             for(let k = 0; k < grid.length; k++){
                 for(let l = 0; l < grid.length; l++){
