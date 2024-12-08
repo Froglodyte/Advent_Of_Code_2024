@@ -17,9 +17,9 @@ for(let posns of antennae.values()){
 
             for(let k = 0; k < grid.length; k++){
                 for(let l = 0; l < grid.length; l++){
+                    const d1 = Math.abs(l - x1) + Math.abs(k - y1)
                     const d2 = Math.abs(l - x2) + Math.abs(k - y2)
-                    const d3 = Math.abs(l - x1) + Math.abs(k - y1)
-                    if((d3 == d2*2 || d2 == d3*2) && ((k - y1) * (x2 - x1) - (l - x1) * (y2 - y1) == 0)) antiPoints.add(`${l}, ${k}`)      
+                    if((d1 == d2*2 || d2 == d1*2) && ((k - y1) * (x2 - x1) - (l - x1) * (y2 - y1) == 0)) antiPoints.add(`${l}, ${k}`)      
                 }
             }
         }
