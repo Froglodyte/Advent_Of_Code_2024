@@ -1,7 +1,7 @@
 let pages = (await Bun.file("./DAY05/pages.txt").text()).split("\r\n").map(nums => nums.split(",").map(nums => Number(nums)))
 let rules = (await Bun.file("./DAY05/rules.txt").text()).split("\r\n").map(nums => nums.split("|").map(nums => Number(nums)))
   
-let wrongpages = [];
+let wrongpages: number[][] = [];
 
 let sum = 0;
 
