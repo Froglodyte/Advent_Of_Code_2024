@@ -1,5 +1,4 @@
 const topo = (await Bun.file("./DAY10/map.txt").text()).split("\r\n").map((x) => x.split("").map((y) => Number(y)));
-//console.log(topo)
 
 let scoreSum = 0;
 
