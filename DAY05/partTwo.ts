@@ -1,5 +1,5 @@
-let pages = (await Bun.file("./DAY05/pages.txt").text()).split("\r\n").map(nums => nums.split(",").map(nums => Number(nums)))
-let rules = (await Bun.file("./DAY05/rules.txt").text()).split("\r\n").map(nums => nums.split("|").map(nums => Number(nums)))
+const pages = (await Bun.file("./DAY05/pages.txt").text()).split("\r\n").map(nums => nums.split(",").map(nums => Number(nums)))
+const rules = (await Bun.file("./DAY05/rules.txt").text()).split("\r\n").map(nums => nums.split("|").map(nums => Number(nums)))
   
 let wrongpages: number[][] = [];
 
