@@ -1,6 +1,6 @@
 # AoC Solutions 2024
 
-These solutions are written in Typescript + Bun. Im aware that solutions for days 1 to 4 are missing. Theyll be added later.
+These solutions are written in Typescript + Bun. Not the most efficient, but fuck it we ball
 
 To install dependencies:
 
